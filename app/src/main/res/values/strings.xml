@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="login">логин</string>
+    <string name="password">пароль</string>
+    <string name="no_account">Нет аккаунта?</string>
+    <string name="enter">Войти</string>
+    <string name="second_name">фамилия</string>
+    <string name="first_name">имя</string>
+    <string name="patronymic">отчество</string>
+    <string name="register">зарегистрироваться</string>
 </resources>

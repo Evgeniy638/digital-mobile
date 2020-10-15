@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingLeft="@dimen/marginLeftAndRightLogin"
+    android:paddingRight="@dimen/marginLeftAndRightLogin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="@dimen/textSizeTextViewLogin"/>
+
+
+    <EditText
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="@string/login"
+        android:background="@drawable/edit_text"
+        android:layout_marginBottom="@dimen/marginBottomLogin"
+        android:textSize="@dimen/fontSizeEditTextLogin"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textSize="@dimen/textSizeTextViewLogin"/>
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:background="@drawable/edit_text"
+        android:hint="@string/password"
+        android:layout_marginBottom="@dimen/marginBottomLogin"
+        android:textSize="@dimen/fontSizeEditTextLogin"/>
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/enter"
+        android:textSize="@dimen/fontSizeButtonLogin"
+        android:background="@drawable/button_login"
+        android:layout_marginBottom="@dimen/marginBottomLogin"/>
+
+    <Button
+        android:id="@+id/no_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/fontSizeButtonLogin"
+        android:background="@drawable/button_login_red"
+        android:text="@string/no_account"/>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginBottomLogin">20dp</dimen>
+    <dimen name="textSizeTextViewLogin">10pt</dimen>
+    <dimen name="fontSizeEditTextLogin">13pt</dimen>
+    <dimen name="fontSizeButtonLogin">12pt</dimen>
+    <dimen name="marginLeftAndRightLogin">25dp</dimen>
+</resources>
