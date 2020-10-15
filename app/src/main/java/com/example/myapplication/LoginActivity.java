@@ -30,6 +30,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private String loginText;
     private String passwordText;
 
+    public static final int GO_TO_REGISTER = 1;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +71,32 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     //переходим на регистрацию
     void goToRegister() {
-        startActivity(new Intent(this, RegisterActivity.class));
+        startActivityForResult(
+                new Intent(this, RegisterActivity.class),
+                GO_TO_REGISTER
+        );
+    }
+
+    //возвращаю новый логин и пароль для сохранения их
+    void finishActivity(String login, String password) {
+        Intent intent = new Intent();
+        intent.putExtra(MainActivity.KEY_LOGIN, login);
+        intent.putExtra(MainActivity.KEY_LOGIN, password);
+        setResult(MainActivity.LOGIN_INTENT_CODE);
+        finish();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case GO_TO_REGISTER:
+                assert data != null;
+                finishActivity(data.getStringExtra(MainActivity.KEY_LOGIN),
+                        data.getStringExtra(MainActivity.KEY_PASSWORD));
+                break;
+        }
     }
 
     @Override
@@ -105,13 +132,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                     Toast.makeText(context, "Вы успешно авторизовались!", Toast.LENGTH_SHORT).show();
 
-                    //возвращаю новый логин и пароль для сохранения их
-                    Intent intent = new Intent();
-                    intent.putExtra(MainActivity.KEY_LOGIN, loginText);
-                    intent.putExtra(MainActivity.KEY_LOGIN, passwordText);
-                    setResult(MainActivity.LOGIN_INTENT_CODE);
-                    finish();
-
+                    finishActivity(loginText, passwordText);
                 } catch (IOException e) {
                     e.printStackTrace();
                 } catch (NullPointerException e) {
