@@ -38,6 +38,7 @@
         android:singleLine="true"
         android:background="@drawable/edit_text"
         android:hint="@string/password"
+        android:inputType="textPassword"
         android:layout_marginBottom="@dimen/marginBottomLogin"
         android:textSize="@dimen/fontSizeEditTextLogin"/>
 

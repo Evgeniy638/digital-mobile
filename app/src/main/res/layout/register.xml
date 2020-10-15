@@ -88,11 +88,12 @@
         android:id="@+id/password1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:hint="@string/password"
-        android:background="@drawable/edit_text"
         android:layout_marginBottom="@dimen/marginBottomLogin"
-        android:textSize="@dimen/fontSizeEditTextLogin"/>
+        android:background="@drawable/edit_text"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textSize="@dimen/fontSizeEditTextLogin" />
 
     <TextView
         android:layout_width="match_parent"
@@ -105,11 +106,12 @@
         android:id="@+id/password2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:hint="@string/password"
-        android:background="@drawable/edit_text"
         android:layout_marginBottom="@dimen/marginBottomLogin"
-        android:textSize="@dimen/fontSizeEditTextLogin"/>
+        android:background="@drawable/edit_text"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textSize="@dimen/fontSizeEditTextLogin" />
 
     <Button
         android:id="@+id/registration_to_register"
